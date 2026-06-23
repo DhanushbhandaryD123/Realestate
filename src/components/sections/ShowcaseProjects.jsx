@@ -6,8 +6,8 @@ import { fadeUp, staggerContainer, viewport } from "../../utils/motion";
 
 export default function ShowcaseProjects() {
   return (
-    <section className="relative overflow-hidden bg-navy-light py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="relative overflow-hidden bg-navy-light py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
         <SectionHeading
           light
           eyebrow="In Development"
@@ -20,7 +20,7 @@ export default function ShowcaseProjects() {
           initial="hidden"
           whileInView="show"
           viewport={viewport}
-          className="mt-14 grid gap-7 lg:grid-cols-3"
+          className="mt-8 grid gap-5 sm:mt-14 sm:gap-7 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((p) => (
             <motion.article

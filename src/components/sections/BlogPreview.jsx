@@ -10,9 +10,9 @@ export default function BlogPreview() {
   const posts = blogPosts.slice(0, 3);
 
   return (
-    <section className="bg-cream py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col items-end justify-between gap-6 sm:flex-row">
+    <section className="bg-cream py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading
             align="left"
             eyebrow="Insights"
@@ -29,7 +29,7 @@ export default function BlogPreview() {
           initial="hidden"
           whileInView="show"
           viewport={viewport}
-          className="mt-12 grid gap-7 md:grid-cols-3"
+          className="mt-8 grid gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-7 md:grid-cols-3"
         >
           {posts.map((post) => (
             <motion.article key={post.id} variants={fadeUp()}>

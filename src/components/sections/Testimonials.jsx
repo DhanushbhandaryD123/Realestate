@@ -12,19 +12,19 @@ export default function Testimonials() {
     setIndex((i) => (i + dir + testimonials.length) % testimonials.length);
 
   return (
-    <section className="relative overflow-hidden bg-navy py-24">
+    <section className="relative overflow-hidden bg-navy py-14 lg:py-24">
       <Quote
         size={220}
         className="pointer-events-none absolute -left-10 top-10 text-white/[0.03]"
       />
-      <div className="mx-auto max-w-4xl px-5 lg:px-8">
+      <div className="mx-auto max-w-4xl px-4 sm:px-5 lg:px-8">
         <SectionHeading
           light
           eyebrow="Client Stories"
           title="What Our Clients Say"
         />
 
-        <div className="relative mt-14">
+        <div className="relative mt-8 sm:mt-14">
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={index}
@@ -39,7 +39,7 @@ export default function Testimonials() {
                   <Star key={i} size={20} className="fill-gold text-gold" />
                 ))}
               </div>
-              <p className="font-display text-2xl leading-relaxed text-white sm:text-[1.75rem]">
+              <p className="font-display text-xl leading-relaxed text-white sm:text-2xl lg:text-[1.75rem]">
                 “{t.quote}”
               </p>
               <div className="mt-8 flex items-center justify-center gap-4">

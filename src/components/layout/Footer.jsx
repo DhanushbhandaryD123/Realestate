@@ -51,10 +51,10 @@ export default function Footer() {
   return (
     <footer className="relative bg-navy text-cream/70">
       <div className="gold-rule" />
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)_1.4fr]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-5 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)_1.4fr]">
           {/* Brand */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-baseline gap-1">
               <span className="font-display text-2xl text-white">LUXE</span>
               <span className="font-display text-2xl text-gradient-gold">Estate</span>
@@ -97,7 +97,7 @@ export default function Footer() {
           ))}
 
           {/* Newsletter + contact */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="font-display text-base text-white">Newsletter</h4>
             <p className="mt-5 text-sm">
               Off-market listings and market intelligence, monthly.

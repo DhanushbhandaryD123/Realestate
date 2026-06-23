@@ -60,8 +60,8 @@ export default function InvestmentCalculator() {
   const totalReturn = grossYield + appreciation;
 
   return (
-    <section className="bg-navy py-24">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+    <section className="bg-navy py-14 lg:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
         <SectionHeading
           light
           eyebrow="Plan Ahead"
@@ -69,9 +69,9 @@ export default function InvestmentCalculator() {
           subtitle="Model your numbers before you commit — mortgage, returns and yield in one place."
         />
 
-        <div className="mt-12 grid overflow-hidden rounded-3xl bg-navy-light ring-1 ring-white/8 lg:grid-cols-[1.2fr_1fr]">
+        <div className="mt-8 grid overflow-hidden rounded-3xl bg-navy-light ring-1 ring-white/8 sm:mt-12 lg:grid-cols-[1.2fr_1fr]">
           {/* Inputs */}
-          <div className="p-8">
+          <div className="p-5 sm:p-8">
             <div className="mb-8 flex flex-wrap gap-2">
               {tabs.map((t) => (
                 <button
@@ -155,7 +155,7 @@ export default function InvestmentCalculator() {
           </div>
 
           {/* Result */}
-          <div className="flex flex-col justify-center border-t border-white/8 bg-gradient-to-br from-navy to-navy-soft p-8 lg:border-l lg:border-t-0">
+          <div className="flex flex-col justify-center border-t border-white/8 bg-gradient-to-br from-navy to-navy-soft p-5 sm:p-8 lg:border-l lg:border-t-0">
             <motion.div
               key={tab}
               initial={{ opacity: 0, scale: 0.96 }}
@@ -168,7 +168,7 @@ export default function InvestmentCalculator() {
                   <p className="text-sm uppercase tracking-wider text-cream/50">
                     Monthly Payment
                   </p>
-                  <p className="mt-3 font-display text-5xl text-gradient-gold">
+                  <p className="mt-3 font-display text-4xl text-gradient-gold sm:text-5xl">
                     ${Math.round(emi).toLocaleString()}
                   </p>
                   <div className="mt-8 space-y-3 text-sm">
@@ -183,7 +183,7 @@ export default function InvestmentCalculator() {
                   <p className="text-sm uppercase tracking-wider text-cream/50">
                     Total Annual Return
                   </p>
-                  <p className="mt-3 font-display text-5xl text-gradient-gold">
+                  <p className="mt-3 font-display text-4xl text-gradient-gold sm:text-5xl">
                     {totalReturn.toFixed(1)}%
                   </p>
                   <div className="mt-8 space-y-3 text-sm">
@@ -198,7 +198,7 @@ export default function InvestmentCalculator() {
                   <p className="text-sm uppercase tracking-wider text-cream/50">
                     Gross Rental Yield
                   </p>
-                  <p className="mt-3 font-display text-5xl text-gradient-gold">
+                  <p className="mt-3 font-display text-4xl text-gradient-gold sm:text-5xl">
                     {grossYield.toFixed(2)}%
                   </p>
                   <div className="mt-8 space-y-3 text-sm">

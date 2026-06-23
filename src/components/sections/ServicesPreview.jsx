@@ -12,13 +12,13 @@ export function ServiceGrid({ list = services }) {
       initial="hidden"
       whileInView="show"
       viewport={viewport}
-      className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+      className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
     >
       {list.map((s) => (
         <motion.div
           key={s.title}
           variants={fadeUp()}
-          className="group rounded-2xl border border-navy/8 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:bg-navy"
+          className="group rounded-2xl border border-navy/8 bg-white p-5 transition-all duration-300 hover:-translate-y-1.5 hover:bg-navy sm:p-6"
         >
           <span className="grid h-13 w-13 place-items-center rounded-xl bg-gold/10 p-3 text-gold transition group-hover:bg-gold group-hover:text-navy">
             <s.icon size={22} />
@@ -37,9 +37,9 @@ export function ServiceGrid({ list = services }) {
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-cream py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col items-end justify-between gap-6 sm:flex-row">
+    <section className="bg-cream py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading
             align="left"
             eyebrow="What We Do"
@@ -50,7 +50,7 @@ export default function ServicesPreview() {
             All Services <ArrowRight size={16} />
           </Button>
         </div>
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-12">
           <ServiceGrid list={services.slice(0, 8)} />
         </div>
       </div>

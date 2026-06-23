@@ -5,7 +5,7 @@ import { fadeUp, staggerContainer } from "../../utils/motion";
 
 export default function PageHeader({ title, subtitle, breadcrumb = [], image }) {
   return (
-    <section className="relative flex min-h-[46vh] items-end overflow-hidden bg-navy pb-14 pt-32">
+    <section className="relative flex min-h-[38vh] items-end overflow-hidden bg-navy pb-10 pt-24 sm:min-h-[46vh] sm:pb-14 sm:pt-32">
       {image && (
         <>
           <img
@@ -20,7 +20,7 @@ export default function PageHeader({ title, subtitle, breadcrumb = [], image }) 
         variants={staggerContainer()}
         initial="hidden"
         animate="show"
-        className="relative mx-auto w-full max-w-7xl px-5 lg:px-8"
+        className="relative mx-auto w-full max-w-7xl px-4 sm:px-5 lg:px-8"
       >
         <motion.nav
           variants={fadeUp()}
@@ -40,7 +40,7 @@ export default function PageHeader({ title, subtitle, breadcrumb = [], image }) 
         </motion.nav>
         <motion.h1
           variants={fadeUp(0.1)}
-          className="font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl"
+          className="font-display text-3xl leading-tight text-white sm:text-4xl lg:text-6xl"
         >
           {title}
         </motion.h1>

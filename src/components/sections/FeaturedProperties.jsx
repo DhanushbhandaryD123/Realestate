@@ -10,9 +10,9 @@ export default function FeaturedProperties() {
   const featured = properties.filter((p) => p.featured).slice(0, 6);
 
   return (
-    <section className="bg-cream py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col items-end justify-between gap-6 sm:flex-row">
+    <section className="bg-cream py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading
             align="left"
             eyebrow="Handpicked"
@@ -29,7 +29,7 @@ export default function FeaturedProperties() {
           initial="hidden"
           whileInView="show"
           viewport={viewport}
-          className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-8 grid gap-5 sm:mt-12 sm:gap-7 sm:grid-cols-2 lg:grid-cols-3"
         >
           {featured.map((p, i) => (
             <PropertyCard key={p.id} property={p} index={i} />

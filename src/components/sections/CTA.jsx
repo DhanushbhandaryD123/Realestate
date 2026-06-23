@@ -18,16 +18,16 @@ export default function CTA() {
         initial="hidden"
         whileInView="show"
         viewport={viewport}
-        className="relative mx-auto max-w-7xl px-5 py-24 text-center lg:px-8"
+        className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-5 sm:py-24 lg:px-8"
       >
         <span className="eyebrow text-gold">Let's Begin</span>
-        <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl leading-tight text-white sm:text-5xl">
+        <h2 className="mx-auto mt-4 max-w-3xl font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
           Ready To Find Your Dream Property?
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-base text-cream/70">
           Speak to an advisor today and let us shortlist the homes worth your time.
         </p>
-        <div className="mt-9 flex flex-wrap justify-center gap-4">
+        <div className="mt-7 flex flex-col items-center gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
           <Button to="/contact" size="lg">
             <Phone size={18} /> Contact an Agent
           </Button>

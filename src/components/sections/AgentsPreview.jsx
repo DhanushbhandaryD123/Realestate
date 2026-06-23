@@ -12,7 +12,7 @@ export function AgentGrid({ list = agents }) {
       initial="hidden"
       whileInView="show"
       viewport={viewport}
-      className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4"
+      className="grid gap-5 sm:grid-cols-2 sm:gap-7 lg:grid-cols-4"
     >
       {list.map((a) => (
         <motion.article
@@ -20,7 +20,7 @@ export function AgentGrid({ list = agents }) {
           variants={fadeUp()}
           className="group overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-card)] ring-1 ring-navy/5"
         >
-          <div className="relative h-72 overflow-hidden">
+          <div className="relative h-56 overflow-hidden sm:h-72">
             <img
               src={a.image}
               alt={a.name}
@@ -68,9 +68,9 @@ export function AgentGrid({ list = agents }) {
 
 export default function AgentsPreview() {
   return (
-    <section className="bg-cream py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col items-end justify-between gap-6 sm:flex-row">
+    <section className="bg-cream py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <SectionHeading
             align="left"
             eyebrow="The People"
@@ -81,7 +81,7 @@ export default function AgentsPreview() {
             All Agents <ArrowRight size={16} />
           </Button>
         </div>
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-12">
           <AgentGrid list={agents.slice(0, 4)} />
         </div>
       </div>

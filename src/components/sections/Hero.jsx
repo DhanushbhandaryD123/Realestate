@@ -33,7 +33,7 @@ export default function Hero() {
         variants={staggerContainer(0.15, 0.3)}
         initial="hidden"
         animate="show"
-        className="relative mx-auto w-full max-w-7xl px-5 pt-28 pb-16 lg:px-8"
+        className="relative mx-auto w-full max-w-7xl px-4 pt-24 pb-14 sm:px-5 sm:pt-28 sm:pb-16 lg:px-8"
       >
         <motion.span
           variants={fadeUp()}
@@ -44,7 +44,7 @@ export default function Hero() {
 
         <motion.h1
           variants={fadeUp(0.1)}
-          className="mt-5 max-w-4xl font-display text-4xl leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+          className="mt-4 max-w-4xl font-display text-3xl leading-[1.05] text-white sm:mt-5 sm:text-5xl lg:text-7xl"
         >
           Find Your Dream Property{" "}
           <span className="text-gradient-gold">With Confidence</span>
@@ -52,13 +52,13 @@ export default function Hero() {
 
         <motion.p
           variants={fadeUp(0.2)}
-          className="mt-6 max-w-xl text-lg leading-relaxed text-cream/75"
+          className="mt-4 max-w-xl text-base leading-relaxed text-cream/75 sm:mt-6 sm:text-lg"
         >
           Luxury homes, apartments, villas, commercial spaces and investment
           opportunities — handpicked and verified by advisors who know the market.
         </motion.p>
 
-        <motion.div variants={fadeUp(0.3)} className="mt-8 flex flex-wrap gap-4">
+        <motion.div variants={fadeUp(0.3)} className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
           <Button to="/properties" size="lg">
             Explore Properties
           </Button>
@@ -70,9 +70,9 @@ export default function Hero() {
         {/* Search bar */}
         <motion.div
           variants={fadeUp(0.45)}
-          className="mt-12 max-w-5xl rounded-2xl glass-light p-2"
+          className="mt-8 max-w-5xl rounded-2xl glass-light p-2 sm:mt-12"
         >
-          <div className="grid gap-2 md:grid-cols-[repeat(4,1fr)_auto]">
+          <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-[repeat(4,1fr)_auto]">
             {fields.map((f) => (
               <div
                 key={f.label}
@@ -92,7 +92,7 @@ export default function Hero() {
             ))}
             <Link
               to="/properties"
-              className="flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3 font-medium text-navy transition hover:bg-gold-soft"
+              className="flex items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3 font-medium text-navy transition hover:bg-gold-soft sm:col-span-2 md:col-span-1"
             >
               <Search size={18} /> Search
             </Link>

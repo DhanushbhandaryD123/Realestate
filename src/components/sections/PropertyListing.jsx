@@ -140,8 +140,8 @@ export default function PropertyListing({ purpose = "all", lockPurpose = false }
   );
 
   return (
-    <section className="bg-cream py-16">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="bg-cream py-10 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
         {/* Search + sort bar */}
         <div className="flex flex-col gap-4 rounded-2xl bg-white p-4 shadow-[var(--shadow-card)] ring-1 ring-navy/5 lg:flex-row lg:items-center">
           <div className="flex flex-1 items-center gap-3 rounded-xl border border-navy/10 px-4 py-3 focus-within:border-gold">
@@ -212,7 +212,7 @@ export default function PropertyListing({ purpose = "all", lockPurpose = false }
             variants={staggerContainer(0.06)}
             initial="hidden"
             animate="show"
-            className="mt-6 grid gap-7 sm:grid-cols-2 lg:grid-cols-3"
+            className="mt-6 grid gap-5 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3"
           >
             {pageItems.map((p, i) => (
               <PropertyCard key={p.id} property={p} index={i} />

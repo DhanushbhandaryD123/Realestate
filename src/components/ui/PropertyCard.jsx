@@ -13,7 +13,7 @@ export default function PropertyCard({ property, index = 0 }) {
       variants={fadeUp(index * 0.05)}
       className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-card)] ring-1 ring-navy/5"
     >
-      <div className="relative h-60 overflow-hidden">
+      <div className="relative h-52 overflow-hidden sm:h-60">
         <Link to={`/properties/${property.slug}`}>
           <img
             src={property.images[0]}

@@ -8,15 +8,15 @@ export default function FAQ({ light = false }) {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className={`${light ? "bg-cream" : "bg-cream"} py-24`}>
-      <div className="mx-auto max-w-3xl px-5 lg:px-8">
+    <section className={`${light ? "bg-cream" : "bg-cream"} py-14 lg:py-24`}>
+      <div className="mx-auto max-w-3xl px-4 sm:px-5 lg:px-8">
         <SectionHeading
           eyebrow="Good to Know"
           title="Frequently Asked Questions"
           subtitle="Everything you might want to ask before getting started."
         />
 
-        <div className="mt-12 space-y-3">
+        <div className="mt-8 space-y-3 sm:mt-12">
           {faqs.map((faq, i) => {
             const isOpen = open === i;
             return (
@@ -28,10 +28,10 @@ export default function FAQ({ light = false }) {
               >
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left sm:gap-4 sm:px-6 sm:py-5"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display text-lg text-navy">{faq.q}</span>
+                  <span className="font-display text-base text-navy sm:text-lg">{faq.q}</span>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
@@ -50,7 +50,7 @@ export default function FAQ({ light = false }) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
-                      <p className="px-6 pb-5 text-sm leading-relaxed text-navy/60">
+                      <p className="px-4 pb-4 text-sm leading-relaxed text-navy/60 sm:px-6 sm:pb-5">
                         {faq.a}
                       </p>
                     </motion.div>
